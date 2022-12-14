@@ -10,7 +10,6 @@ public class ResetGame : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         }
     }
 }

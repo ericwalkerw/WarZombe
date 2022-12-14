@@ -11,13 +11,13 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         bullet = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        bullet.velocity = transform.up * speed;
+        bullet.velocity = transform.right * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
