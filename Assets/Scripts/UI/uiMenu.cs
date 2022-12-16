@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class uiMenu : MonoBehaviour
 {
@@ -11,7 +12,14 @@ public class uiMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public Slider musicSlider;
+
     Resolution[] resolutions;
+
+    public void MusicVolume()
+    {
+        AudioManeger.instance.MusicVolume(musicSlider.value);
+    }
 
     public void Start()
     {
@@ -42,6 +50,11 @@ public class uiMenu : MonoBehaviour
     public void Sound(float Sound)
     {
         audioMixer.SetFloat("Sound", Sound);
+    }
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width,resolution.height, Screen.fullScreen);
     }
 
     public void SetQuality(int qualitiIndex)

@@ -139,12 +139,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 4
-  radius: 0.63
+  damage: 1
+  attackCooldown: 0.9
+  radius: 0.7
   BloodPre: {fileID: 426363051690277679, guid: 54d328607043b5440b4de7e1860594f4, type: 3}
   attackZone: {fileID: 1290050863754209025}
   layerName:
     serializedVersion: 2
     m_Bits: 64
+  attackSound: {fileID: 8300000, guid: 4fb45f9472f5e554c82a5a9c7ba4c739, type: 3}
+  deathSound: {fileID: 8300000, guid: 0547b940dba4d964e9e447af1dc0759a, type: 3}
+  runSound: {fileID: 8300000, guid: e29d35a3561cf964e9c39f5b99c2696c, type: 3}
 --- !u!95 &8360447710811115378
 Animator:
   serializedVersion: 4
@@ -189,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4998329134933109284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.762, y: -0.16, z: 0}
+  m_LocalPosition: {x: 1.31, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
