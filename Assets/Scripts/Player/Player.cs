@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -96,6 +97,7 @@ public class Player : MonoBehaviour
     public void Die()
     {    
         Instantiate(BloodPre, transform.position, Quaternion.identity);       
-        Destroy(gameObject);       
+        Destroy(gameObject);
+        SceneManager.LoadScene(1);
     }
 }
